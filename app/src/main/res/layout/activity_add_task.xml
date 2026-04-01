@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Task"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/editTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task Title (e.g. Buy Milk)"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/editDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:layout_marginTop="16dp"
+            android:minHeight="48dp"/>
+
+        <Button
+            android:id="@+id/btnPickTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Start Time (Optional)"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#6750A4"
+            android:drawableLeft="@android:drawable/ic_menu_recent_history"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/textTimePreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remind immediately upon arrival"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#757575"/>
+
+        <TextView
+            android:id="@+id/textRadius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trigger Radius: 500m"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"/>
+
+        <SeekBar
+            android:id="@+id/seekBarRadius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="2000"
+            android:min="100"
+            android:progress="500"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alert Type"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioNotify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loud Alarm"
+                android:layout_marginStart="16dp"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Location on Map"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#FF5722"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/editAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address (Auto-filled)"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"
+            android:focusable="false"
+            android:clickable="false"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Task"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="50dp"/>
+
+    </LinearLayout>
+</ScrollView>
